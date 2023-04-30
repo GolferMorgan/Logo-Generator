@@ -10,7 +10,7 @@ class SVG {
         this.shapesElement = ''
     }
     render() {
-        // need to know what to render
+        return `<SVG height='300px' width='300px' viewBox='0 0 300 300'/>`
     }
     setTextElement(text,colors) {
         this.textElement = `<text x='30' y='30' font-size='60' text-anchor='middle' fill='${text,colors}`
@@ -21,7 +21,7 @@ class SVG {
 };
 
 // added inquirer questions
-const inquirer = [
+const questions = [
     {
         type: 'input',
         name: 'text',
