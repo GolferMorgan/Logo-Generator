@@ -46,15 +46,15 @@ const questions = [
 ]
 
 // writes the logo file
-function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(process.cwd(), fileName), data)
+function writeToFile(logo, data) {
+    return fs.writeFileSync(logo, data)
 }
 
 // initailizes app
 function init() {
     inquirer.prompt(questions).then((response) => {
         console.log('making a logo')
-        writeToFile("./examples",((response)))
+        writeToFile("./logo.svg",((response)))
     })
 }
 
