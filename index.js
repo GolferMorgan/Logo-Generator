@@ -10,10 +10,10 @@ class SVG {
         this.shapesElement = ''
     }
     render() {
-        return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${this.shapeElement}${this.textElement}</svg>`
+        return `<svg version="1.1" width="400" height="400" xmlns="http://www.w3.org/2000/svg">${this.shapesElement}${this.textElement}</svg>`
     }
     setTextElement(text,colors) {
-        this.textElement = `<text x='30' y='30' font-size='60' text-anchor='middle' fill='${colors}'>${text}</text>`
+        this.textElement = `<text x='200' y='200' font-size='100' text-anchor='middle' fill='${colors}'>${text}</text>`
         // <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
     }
     setShapesElement(shapes) {
@@ -48,8 +48,7 @@ const questions = [
 
 // writes the logo file
 function writeToFile(fileName, svg) {
-    // var content = logo.data
-    return fs.writeFilesync(fileName, svg, function(error) {
+    return fs.writeFileSync(fileName, svg, function(error) {
         if (error) {
             console.log('oops there is a problem!')
         }
@@ -72,10 +71,11 @@ function init() {
      shape.setColors(data.shapeColor)
      svg.setShapesElement(shape)
      svg.setTextElement(data.text,data.colors)
-     console.log(svg)
+     console.log(svg.render)
 
      var fileName = 'logo.svg'
-     writeToFile(fileName, svg)
+     console.log(svg.render())
+     writeToFile(fileName, svg.render())
     })
 }
 
