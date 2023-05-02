@@ -7,6 +7,7 @@
   - [Usage](#usage)
   - [Tests](#test)
   - [Contributors](#contributors)
+  - [Deployment](#deployment)
     [- License](#license)
 
   ## Description
@@ -21,5 +22,8 @@
   Jest tests were used to make sure the shapes work
   ## Contributors
   Morgan 
+  ## Deployment
+  Video - https://drive.google.com/file/d/1mMPlK_X3jYWBJe82Qh6oi_esZvwpDq3i/view
+  Github Repo - https://github.com/GolferMorgan/Logo-Generator
   ## License
     This Project is Licensed By The MIT License
